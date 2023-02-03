@@ -127,16 +127,19 @@
     </plugins>
   </reporting>
 
-  <distributionManagement>
-    <snapshotRepository>
-      <id>deployment</id>
-      <name>my snapshot repository</name>
-      <url>http://3.110.172.101:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
+<distributionManagement>
     <repository>
-      <id>deployment</id>
-      <name>my repository</name>
-      <url>http://3.110.172.101:8081/repository/maven-releases/</url>
+      <uniqueVersion>false</uniqueVersion>
+      <id>Deployment</id>
+      <name>Releases</name>
+      <url>http://15.207.114.42:8081/repository/maven-releases/</url>
     </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>Deployment</id>
+      <name>Snapshots</name>
+      <url>http://15.207.114.42:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
+
 </project>
